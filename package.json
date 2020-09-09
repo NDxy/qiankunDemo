@@ -1,0 +1,24 @@
+{
+  "name": "qiankun-demo",
+  "version": "1.0.0",
+  "description": "用`qiankun`来实现`vue`技术栈的前端微服务",
+  "main": "index.js",
+  "scripts": {
+    "install:son-one": "cd qiankun_son_one && npm install",
+    "install:son-two": "cd qiankun_son_two && npm install",
+    "install:main": "cd qiankun_master && npm install",
+    "install-all": "npm-run-all install:*",
+    "start:son-one": "cd qiankun_son_one && npm run serve ",
+    "start:son-two": "cd qiankun_son_two && npm run serve",
+    "start:main": "cd qiankun_master && npm run serve",
+    "start-all": "npm-run-all --parallel start:*",
+    "serve-all": "npm-run-all --parallel start:*",
+    "build:son-one": "cd qiankun_son_one && npm run build",
+    "build:son-two": "cd qiankun_son_two && npm run build",
+    "build:main": "cd qiankun_master && npm run build",
+    "build-all": "npm-run-all --parallel build:*"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

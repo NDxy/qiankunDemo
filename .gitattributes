@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+app-vue-hash/node_modules/
+app-vue-hash/dist/
+app-vue-history/node_modules/
+app-vue-history/dist/
+main/node_modules/
+main/dist/
+/node_modules
