@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-09-04 15:48:53
- * @LastEditTime: 2020-09-08 18:19:37
+ * @LastEditTime: 2020-09-09 15:12:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \qiankunDemo\qiankun_master\src\App.vue
@@ -16,7 +16,7 @@
       <router-link to="/two">son-two</router-link>
     </div>
     <div>
-      <h3>父级公共资源数据：{{commonData.parent}}</h3>
+      <h3>父级公共资源数据：<a @click="setCommonData">{{commonData.parent}}</a></h3>
     </div>
     <router-view />
     <div v-if="loading"
@@ -37,6 +37,11 @@ export default {
       type: String,
       default: ''
     },
+  },
+  methods: {
+    setCommonData() {
+      this.$store.commit('setCommonData', { parent: '父级控制' });
+    }
   },
   computed: {
     commonData() {
